@@ -28,6 +28,23 @@ def ordering():
     elif First >= Fourth >= Second >= Third:
         print('The descending order of the numbers is:')
         print(First, Fourth, Second, Third)
-
+    elif Second >= First >= Third >= Fourth: # Possible the second number is the highest.
+        print('The descending order of the numbers is:')
+        print(Second, First, Third, Fourth)
+    elif Second >= First >= Fourth >= Third:
+        print('The descending order of the numbers is:')
+        print(Second, First, Fourth, Third)
+    elif Second >= Third >= First >= Fourth:
+        print('The descending order of the numbers is:')
+        print(Second, Third, First, Fourth)
+    elif Second >= Third >= Fourth >= First:
+        print('The descending order of the numbers is:')
+        print(Second, Third, Fourth, First)
+    elif Second >= Fourth >= First >= Third:
+        print('The descending order of the numbers is:')
+        print(Second, Fourth, First, Third)
+    elif Second >= Fourth >= Third >= First: 
+        print('The descending order of the numbers is:')
+        print(Second, Fourth, Third, First)
 First, Second, Third, Fourth = startup()
 ordering()
