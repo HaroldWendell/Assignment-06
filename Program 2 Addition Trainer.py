@@ -18,13 +18,15 @@ def startup(): # Inquire the user if he/she is prepared for the quiz.
         exit()
 
 def starter_quiz():
+    score = 0
     for x in range(10):
         first_number = random.randint(0, 99) # Generate first random number.
         second_number = random.randint(0,99) # Generate second random number.
-        user_ans = int(input(f'{first_number} + {second_number} = ')) 
-        sys.ans = (first_number + second_number)
+        questions = (f'{first_number} + {second_number}') 
+        user_ans = int(input(f'{x+1}.) {questions} = ')) 
+        sys.ans = (first_number + second_number) #Automatically add the two random numbers.
         if user_ans == sys.ans:
-            score = 1
+            score+=1
             x+=1
             print('Correct answer')
         else:
@@ -32,7 +34,9 @@ def starter_quiz():
                 x+=1
                 print(f'Your answer is incorrect. The correct answer is {sys.ans}.')
         if x == 10:
-            print(f'Your {score}out of 10.')
+            summary = ('Result:', f'Final Score: {score} out of 10.')
+            for result in summary:
+                print(result)
             exit()
 
 startup()
