@@ -23,6 +23,14 @@ def starter_quiz():
         second_number = random.randint(0,99) # Generate second random number.
         user_ans = int(input(f'{first_number} + {second_number} = ')) 
         sys.ans = (first_number + second_number)
+        if user_ans == sys.ans:
+            print('Correct answer')
+        else:
+            if user_ans != sys.ans:
+                print(f'Your answer is incorrect. The correct answer is {sys.ans}.')
+        if x == 10:
+            print('Done')
+            exit()
 
 startup()
 starter_quiz()
