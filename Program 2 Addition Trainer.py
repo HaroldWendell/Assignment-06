@@ -24,12 +24,15 @@ def starter_quiz():
         user_ans = int(input(f'{first_number} + {second_number} = ')) 
         sys.ans = (first_number + second_number)
         if user_ans == sys.ans:
+            score = 1
+            x+=1
             print('Correct answer')
         else:
             if user_ans != sys.ans:
+                x+=1
                 print(f'Your answer is incorrect. The correct answer is {sys.ans}.')
         if x == 10:
-            print('Done')
+            print(f'Your {score}out of 10.')
             exit()
 
 startup()
